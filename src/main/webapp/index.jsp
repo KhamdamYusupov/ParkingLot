@@ -2,12 +2,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>ParkingLot</title>
 </head>
 <body>
-<h1><%= "Servlet example" %>
+<h1><%= "Parking Lot Registration form" %>
 </h1>
 <br/>
-<a href="get">GetServlet</a>
+<br>
+<br>
+
+
+<form action="servlet1">
+    Name:<input type="text" name="name"/><br/>
+    Password:<input type="password" name="password"/><br/>
+
+    <input type="submit" value="login">
+
+</form>
 </body>
 </html>
