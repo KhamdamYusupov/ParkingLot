@@ -1,9 +1,6 @@
 package com.example.servlet20;
-
-
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
-
 import java.io.IOException;
 import java.util.Enumeration;
 
@@ -12,7 +9,6 @@ public class FilterServlet implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig);
     }
-
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         System.out.println("The request URI is: " + ((HttpServletRequest) request).getRequestURI());
@@ -25,7 +21,6 @@ public class FilterServlet implements Filter {
         }
         chain.doFilter(request, response);
     }
-
     @Override
     public void destroy() {
         Filter.super.destroy();

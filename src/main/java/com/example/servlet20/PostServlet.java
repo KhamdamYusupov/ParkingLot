@@ -6,7 +6,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -34,7 +33,6 @@ public class PostServlet extends HttpServlet {
             preparedStatement.setInt(3, Integer.parseInt(carPrice));
             preparedStatement.setInt(4, Integer.parseInt(horsePower));
             preparedStatement.executeUpdate();
-
         } catch (SQLException e) {
             System.err.format("SQL state: %s \n %s", e.getSQLState(), e.getMessage());
         } catch (Exception e) {
