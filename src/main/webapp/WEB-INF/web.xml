@@ -11,6 +11,6 @@
     </filter>
     <filter-mapping>
         <filter-name>FilterServlet</filter-name>
-        <url-pattern>/servlet1</url-pattern>
+         <url-pattern>/cars/*</url-pattern>
     </filter-mapping>
 </web-app>

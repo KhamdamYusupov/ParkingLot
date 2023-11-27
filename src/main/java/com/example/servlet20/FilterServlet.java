@@ -2,9 +2,11 @@ package com.example.servlet20;
 
 
 import jakarta.servlet.*;
+import jakarta.servlet.http.HttpServletRequest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 public class FilterServlet implements Filter {
     @Override
@@ -14,16 +16,15 @@ public class FilterServlet implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        PrintWriter writer = response.getWriter();
-        String name = request.getParameter("name");
-        String password = request.getParameter("password");
-        if(name.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")){
-            chain.doFilter(request, response);
-        } else{
-            writer.println("username or password error");
+        System.out.println("The request URI is: " + ((HttpServletRequest) request).getRequestURI());
+        System.out.println("The remote IP address " + request.getRemoteAddr());
+        System.out.println("The headers of the request are: ");
+        Enumeration<String> headerNames = ((HttpServletRequest) request).getHeaderNames();
+        while(headerNames.hasMoreElements()) {
+            final var headerName = headerNames.nextElement();
+            System.out.println(headerName + " : " + ((HttpServletRequest) request).getHeader(headerName));
         }
-        RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
-        dispatcher.include(request, response);
+        chain.doFilter(request, response);
     }
 
     @Override

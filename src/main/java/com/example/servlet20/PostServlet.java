@@ -36,7 +36,6 @@ public class PostServlet extends HttpServlet {
             preparedStatement.setInt(4, Integer.parseInt(horsePower));
             preparedStatement.executeUpdate();
 
-
         } catch (SQLException e) {
             System.err.format("SQL state: %s \n %s", e.getSQLState(), e.getMessage());
         } catch (Exception e) {
@@ -44,4 +43,4 @@ public class PostServlet extends HttpServlet {
         }
         response.getWriter().println("Your car has successfully registered!!!");
     }
-    }
+}

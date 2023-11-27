@@ -40,7 +40,6 @@ public class GetServlet extends HttpServlet {
             throw new RuntimeException(e);
         } catch (Exception e) {
             e.printStackTrace();
-
         }
     }
 }
