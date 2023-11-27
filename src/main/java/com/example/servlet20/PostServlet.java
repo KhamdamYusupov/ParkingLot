@@ -13,7 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.stream.Collectors;
 
-@WebServlet("/cars/add")
+@WebServlet("/secure/cars/add")
 public class PostServlet extends HttpServlet {
     String carId;
     String carName;
