@@ -4,11 +4,22 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
     <filter>
-        <filter-name>FilterServlet</filter-name>
-        <filter-class>com.example.servlet20.FilterServlet</filter-class>
+        <filter-name>LogFilter</filter-name>
+        <filter-class>com.example.servlet20.LogFilter</filter-class>
     </filter>
     <filter-mapping>
-        <filter-name>FilterServlet</filter-name>
-         <url-pattern>/cars/*</url-pattern>
+        <filter-name>LogFilter</filter-name>
+         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <filter>
+        <filter-name>AuthenticationFilter</filter-name>
+        <filter-class>com.example.servlet20.AuthenticationFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthenticationFilter</filter-name>
+        <url-pattern>/secure/*</url-pattern>
+    </filter-mapping>
+
 </web-app>

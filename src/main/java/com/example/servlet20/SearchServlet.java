@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/cars/search")
+@WebServlet("/secure/cars/search")
 public class SearchServlet extends HttpServlet {
     List<String> carNames = new ArrayList<>();
     @Override
