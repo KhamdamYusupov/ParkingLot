@@ -12,7 +12,6 @@ import jakarta.servlet.annotation.*;
 
 @WebServlet("/cars/list")
 public class GetServlet extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Car> carList = new ArrayList<>();

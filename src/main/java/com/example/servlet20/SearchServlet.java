@@ -16,7 +16,6 @@ import java.util.List;
 public class SearchServlet extends HttpServlet {
     List<String> carNames = new ArrayList<>();
 
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         final String message = req.getReader().readLine();

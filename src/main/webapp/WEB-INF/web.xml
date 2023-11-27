@@ -4,7 +4,6 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-
     <filter>
         <filter-name>FilterServlet</filter-name>
         <filter-class>com.example.servlet20.FilterServlet</filter-class>

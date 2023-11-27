@@ -20,7 +20,6 @@ public class PostServlet extends HttpServlet {
     String carName;
     String carPrice;
     String horsePower;
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String requestBody = request.getReader().lines().collect(Collectors.joining("!"));
