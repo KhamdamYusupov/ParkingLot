@@ -14,10 +14,8 @@ public class AuthenticationFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig);
     }
-
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain) throws IOException, ServletException {
-
         String basicAuthCode = "";
         final Enumeration<String> headerNames = ((HttpServletRequest) request).getHeaderNames();
         boolean authDetailsFound = false;
